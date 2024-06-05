@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 /* -------------------------opening---------------------------- */
 .header{
@@ -27,7 +28,7 @@ a img{
     flex: 1;
     text-align: right;
 }
-ul li{
+.nav-links ul li{
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
@@ -201,20 +202,34 @@ p{
     line-height: 22px;
     padding: 10px;
 }
+.sub-skill{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
 .body{
     display: flex;
-    align-items: center;
+    flex-basis: 40%;
+    background-color: #261C15;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 3em;
     justify-content: center;
+    align-items: center;
+    
+}
+.skill-box{
+    width: 100%;
 }
 .skill{
     text-align: left;
     margin-bottom: 20px;
 }
 .skills{
+    flex-basis: 30%;
     background-color: #261C15;
-    width: 750px;
-    padding: 40px;
-    border-radius: 10px;
+    
+    padding: 30px;
 }
 .skill-name{
     font-size: 18px;
@@ -226,11 +241,30 @@ p{
     height: 14px;
     background-color: rgb(139, 106, 106);
 }
+
 .skillper{
     height: 14px;
     background-color: #E4E6C3;
 }
+.skill-mf{
+    color: #F7F7F2;
+    text-align: left;
+}
 
+.skill-mf .w-title ul li{
+    list-style: decimal;
+    display: list-item;
+    font-size: 1rem;
+
+}
+
+@media (max-width: 700px){
+    .sub-skill{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 /* --------------------services---------------------------- */
 .services{
@@ -255,6 +289,7 @@ p{
     margin-top: 5%;
     display: flex;
     justify-content: space-around;
+    
 }
 .service-col{
     flex-basis: 30%;
