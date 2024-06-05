@@ -1,0 +1,35 @@
+<div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="ri-home-fill"></i>
+                    <span>
+                        <h5>xyz road, Abc building</h5>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="ri-phone-fill"></i>
+                    <span>
+                        <h5>xyz road, Abc building</h5>
+                        <p>Lorem ipsum dolor sit amet </p>
+                    </span>
+                </div>
+                <div>
+                    <i class="ri-mail-fill"></i>
+                    <span>
+                        <h5>xyz road, Abc building</h5>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form action="">
+                    <input type="text" placeholder="Enter your name!" required>
+                    <input type="email" placeholder="Enter your email!" required>
+                    <input type="text" placeholder="subjet" required>
+                    <textarea rows="8" placeholder="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            
+        </div>
