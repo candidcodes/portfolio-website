@@ -267,59 +267,119 @@ p{
 }
 
 /* --------------------services---------------------------- */
-.services{
+.services {
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
 }
-h1{
-    font-size: 36px;
-    font-weight: 600;
-    color: #261C15;
-}
-p{
-    color: #261C15;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-.service-row{
+
+.service-row {
     margin-top: 5%;
     display: flex;
     justify-content: space-around;
-    
 }
-.service-col{
+
+.service-col {
     flex-basis: 30%;
     background-color: #261C15;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 30px;
     transition: all ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between children */
+    height: 500px; /* Set a fixed height for all cards */
+    box-sizing: border-box; /* Include padding in the height */
 }
-.service-col:hover{
+
+.service-col:hover {
     background-color: #F05D23;
     transform: translate(-10px);
 }
-.service-col p{
+
+.service-col p {
     color: beige;
+    flex-grow: 1; /* Make the text grow to take available space */
+    margin-bottom: 20px; /* Add space below the text */
 }
-.service-col h3{
+
+.service-col h3 {
     font-size: 100px;
     text-align: center;
     font-weight: 600;
     margin: 10px;
     color: beige;
 }
-.service-col h5{
+
+.service-col h5 {
     font-size: 16px;
     text-align: center;
     font-weight: 600;
     margin: 10px;
     color: beige;
 }
+
+.project-img {
+    height: 180px;  /* Set a minimum height to ensure visibility */
+    width: 90%;
+    margin: 20px 0; /* Adds some spacing around the image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    border-radius: 6px;
+    background-position: center; /* Centers the image within the div */
+}
+
+/* Specific classes for each image */
+.weather-app-img {
+    background-image: url('images/weather.png');
+}
+
+.todo-list-img {
+    background-image: url('images/todo.jpg');
+}
+
+.expense-tracker-img {
+    background-image: url('images/expense.webp');
+}
+
+p {
+    color: #261C15;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    flex-grow: 1; /* Make the paragraph take up available space */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure the container spans the full width of the parent */
+    margin-top: 10px; /* Add some space above the buttons */
+}
+
+.btn {
+    flex: 1; /* Make buttons take equal space */
+    margin: 0 5px; /* Add some space between the buttons */
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: beige;
+    color: #261C15;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #261C15;
+    color: beige;
+}
+
+
 @media (max-width: 700px){
     .service-row{
         display: inline-block;
