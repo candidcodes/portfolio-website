@@ -33,3 +33,53 @@ document.addEventListener('DOMContentLoaded', function() {
 function openContactPage() {
     window.open('contact.html', '_blank');
   }
+
+
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", function() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      let headerSection = document.querySelector(".header");
+  
+      if (headerSection) {
+          let headerBottom = headerSection.offsetTop + headerSection.offsetHeight;
+  
+          if (currentScroll > lastScrollTop) {
+              // Downscroll code
+              document.querySelector("nav").classList.add("scrolled");
+              document.querySelector("nav img").classList.add("hidden");
+          } else {
+              // Upscroll code
+              if (currentScroll <= headerBottom) {
+                  // Show the logo and set background to transparent only within header
+                  document.querySelector("nav").classList.remove("scrolled");
+                  document.querySelector("nav img").classList.remove("hidden");
+              } else {
+                  // Hide the logo and set background to green when scrolling up outside header
+                  document.querySelector("nav").classList.add("scrolled");
+                  document.querySelector("nav img").classList.add("hidden");
+              }
+          }
+      }
+  
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  }, { passive: true });
+  
+  // Initial check on page load
+  window.addEventListener('load', function() {
+      handleLogoVisibility();
+  });
+  
+  function handleLogoVisibility() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      let headerSection = document.querySelector(".header");
+      if (headerSection) {
+          let headerBottom = headerSection.offsetTop + headerSection.offsetHeight;
+          if (currentScroll <= headerBottom) {
+              document.querySelector("nav img").classList.remove("hidden");
+          } else {
+              document.querySelector("nav img").classList.add("hidden");
+          }
+      }
+  }
+  
