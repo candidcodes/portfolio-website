@@ -30,12 +30,10 @@ nav.scrolled {
     padding: 0% 6%;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
-a img{
-    height: 100px;
-    width: 150px;
+#logo{
     transition: opacity 0.3s ease;
 }
-nav img.hidden {
+nav #logo.hidden {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -69,6 +67,7 @@ nav img.hidden {
 
 
 .textbox{
+    padding-top: 8vh;
     width: 90%;
     position: absolute;
     top: 50%;

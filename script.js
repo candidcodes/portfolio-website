@@ -47,13 +47,13 @@ function openContactPage() {
           if (currentScroll > lastScrollTop) {
               // Downscroll code
               document.querySelector("nav").classList.add("scrolled");
-              document.querySelector("nav img").classList.add("hidden");
+              document.querySelector("nav #logo").classList.add("hidden");
           } else {
               // Upscroll code
               if (currentScroll <= headerBottom) {
                   // Show the logo and set background to transparent only within header
                   document.querySelector("nav").classList.remove("scrolled");
-                  document.querySelector("nav img").classList.remove("hidden");
+                  document.querySelector("nav #logo").classList.remove("hidden");
               } else {
                   // Hide the logo and set background to green when scrolling up outside header
                   document.querySelector("nav").classList.add("scrolled");
